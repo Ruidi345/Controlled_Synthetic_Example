@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  <arg
+      name="use_service_in_circle_convertor"
+      default="false"
+      description="Whether to use service in circle convertor"/>
+
+  <include file="$(find-pkg-share skeleton)/launch/to_circle_part.launch.xml">
+    <arg name="use_service_in_circle_part" value="$(var use_service_in_circle_convertor)"/>
+  </include>
+
+  <node
+      pkg="skeleton"
+      exec="square_generator"
+      name="square_generator_standalone"
+      output="screen">
+
+    <remap from="shape" to="/square_shape"/>
+
+    <param name="use_service" value="$(var use_service_in_circle_convertor)"/>
+
+  </node>
+
+</launch>

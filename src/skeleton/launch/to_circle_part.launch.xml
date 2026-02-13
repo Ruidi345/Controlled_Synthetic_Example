@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+  <arg
+      name="use_service_in_circle_part"
+      default="false"
+      description="Whether to use service in to circle part"/>
+
+  <group>
+    <push-ros-namespace namespace="left"/>
+    <include file="$(find-pkg-share skeleton)/launch/circle_convertor.launch.py">
+      <arg name="use_service" value="$(var use_service_in_circle_part)"/>
+    </include>
+  </group>
+
+  <group>
+    <push-ros-namespace namespace="right"/>
+    <include file="$(find-pkg-share skeleton)/launch/circle_convertor.launch.py">
+      <arg name="use_service" value="$(var use_service_in_circle_part)"/>
+    </include>
+  </group>
+
+</launch>
