@@ -1512,8 +1512,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="MessageType" id="qwbVt7MxZqiDALUrhBV6">
-    <mxGraphModel dx="2253" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="Message&amp; SeriveType" id="qwbVt7MxZqiDALUrhBV6">
+    <mxGraphModel dx="3132" dy="1210" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="qCt_6CAexoyr821_kMOW-0" />
         <mxCell id="qCt_6CAexoyr821_kMOW-1" parent="qCt_6CAexoyr821_kMOW-0" />

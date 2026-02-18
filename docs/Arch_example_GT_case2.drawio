@@ -375,7 +375,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="CC: to_circle_part" id="GIgT2khnrYEh8yz6AhD8">
-    <mxGraphModel dx="54" dy="3186" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="651" dy="2379" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="chTgfghUEFkhrSv6tBfX-0" />
         <mxCell id="chTgfghUEFkhrSv6tBfX-1" parent="chTgfghUEFkhrSv6tBfX-0" />
@@ -600,12 +600,6 @@
         <mxCell id="chTgfghUEFkhrSv6tBfX-231" parent="chTgfghUEFkhrSv6tBfX-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=8 8;" value="" vertex="1">
           <mxGeometry height="280" width="1260" x="3180" y="346.32000000000016" as="geometry" />
         </mxCell>
-        <mxCell id="chTgfghUEFkhrSv6tBfX-232" parent="chTgfghUEFkhrSv6tBfX-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="namespace = left" vertex="1">
-          <mxGeometry height="30" width="120" x="3200" y="1.3200000000001637" as="geometry" />
-        </mxCell>
-        <mxCell id="chTgfghUEFkhrSv6tBfX-233" parent="chTgfghUEFkhrSv6tBfX-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="namespace = right" vertex="1">
-          <mxGeometry height="30" width="120" x="3200" y="361.32000000000016" as="geometry" />
-        </mxCell>
         <mxCell id="VNfN8IHnez3ibNZIwbm3-0" parent="chTgfghUEFkhrSv6tBfX-1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=-90;fillColor=none;" value="" vertex="1">
           <mxGeometry height="226.68" width="35.75" x="2372.97" y="85.79000000000008" as="geometry" />
         </mxCell>
@@ -788,11 +782,17 @@
         <mxCell id="VNfN8IHnez3ibNZIwbm3-45" parent="chTgfghUEFkhrSv6tBfX-1" style="text;whiteSpace=wrap;html=1;" value="&lt;b style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span&gt;namespace&lt;/span&gt;&lt;/b&gt;" vertex="1">
           <mxGeometry height="40" width="170" x="2177.5" y="537.1800000000001" as="geometry" />
         </mxCell>
+        <mxCell id="w8ZL9vHUM8eCtcwKPXHs-0" parent="chTgfghUEFkhrSv6tBfX-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="«namespace»&lt;div&gt;&lt;b&gt;left&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="3220" y="4.5" as="geometry" />
+        </mxCell>
+        <mxCell id="w8ZL9vHUM8eCtcwKPXHs-1" parent="chTgfghUEFkhrSv6tBfX-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;" value="«namespace»&lt;div&gt;&lt;b&gt;right&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="3220" y="359.18" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="CC: circle_convertor" id="xD1y6ouPutmPMvZQZA5x">
-    <mxGraphModel dx="1426" dy="2019" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2305" dy="2379" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="lcFJgV5i-VM-TyHhq6Sa-0" />
         <mxCell id="lcFJgV5i-VM-TyHhq6Sa-1" parent="lcFJgV5i-VM-TyHhq6Sa-0" />
@@ -1155,7 +1155,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="AC: SquareGenerator" id="SjRHoZe2hENuKAcwDs0J">
-    <mxGraphModel dx="1426" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2305" dy="1210" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="otZUiasOcmQOkOJHKqP5-0" />
         <mxCell id="otZUiasOcmQOkOJHKqP5-1" parent="otZUiasOcmQOkOJHKqP5-0" />
@@ -1649,8 +1649,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="MessageType" id="qwbVt7MxZqiDALUrhBV6">
-    <mxGraphModel dx="2411" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="Message&amp; SeriveType" id="qwbVt7MxZqiDALUrhBV6">
+    <mxGraphModel dx="3132" dy="1210" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="qCt_6CAexoyr821_kMOW-0" />
         <mxCell id="qCt_6CAexoyr821_kMOW-1" parent="qCt_6CAexoyr821_kMOW-0" />
