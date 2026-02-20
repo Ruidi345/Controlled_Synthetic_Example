@@ -1,0 +1,35 @@
+@startuml
+!theme plain
+left to right direction
+skinparam packageStyle rectangle
+
+component "circle_convertor" as circle_convertor <<ComposedRosNodeClassifier>> {
+
+    portin " s1 /skeleton::msg::Circle " as portoutside1
+
+    portout "p1 / skeleton::msg::Circle" as portoutside2
+
+    component "square_area_node:\nSquareArea" as square_area_node <<RosNodePart>> {
+        portin "s1" as port1
+        portout "p1" as port2
+    }
+    component "circle_generator_node:\nCircleGenerator" as circle_generator_node <<RosNodePart>> {
+        portin "s1" as port3
+        portout "p1" as port4
+    }
+
+    queue "counting" as counting
+
+    ' CONNECTIONS: Input Subscriptions
+    portoutside1 --[#Blue,bold]-> port1 
+
+    ' CONNECTIONS: square_area_node Publishers
+    port2 --[#Green,bold]-> counting
+
+    ' CONNECTIONS: Pipeline Flow
+    counting --[#Blue,bold]-> port3
+
+    ' CONNECTIONS: circle_generator_node Publishers
+    port4 --[#Green,bold]-> portoutside2
+}
+@enduml

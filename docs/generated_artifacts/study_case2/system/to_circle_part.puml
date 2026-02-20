@@ -1,0 +1,36 @@
+@startuml
+!theme plain
+left to right direction
+skinparam packageStyle rectangle
+
+component "to_circle_part" as to_circle_part <<ComposedRosNodeClassifier>> {
+
+    portin " s1 /skeleton::msg::Circle " as portoutside1
+
+    portout "p2 / skeleton::msg::Circle" as portoutside2
+    portout "p1 / skeleton::msg::Circle" as portoutside3
+
+    package "left" as left <<namespace>> #line.dashed;line:grey {
+        component "circle_convertor" as left_circle_convertor <<RosNodePart>> {
+            portin "s1" as port1
+            portout "p1" as port2
+        }
+    }
+    package "right" as right <<namespace>> #line.dashed;line:grey {
+        component "circle_convertor" as right_circle_convertor <<RosNodePart>> {
+            portin "s1" as port3
+            portout "p1" as port4
+        }
+    }
+
+    ' CONNECTIONS: Input Subscriptions
+    portoutside1 --[#Blue,bold]-> port1 
+    portoutside1 --[#Blue,bold]-> port3 
+
+    ' CONNECTIONS: left_circle_convertor Publishers
+    port2 --[#Green,bold]-> portoutside3
+
+    ' CONNECTIONS: right_circle_convertor Publishers
+    port4 --[#Green,bold]-> portoutside2
+}
+@enduml

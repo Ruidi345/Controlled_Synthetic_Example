@@ -1,0 +1,47 @@
+@startuml
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontSize 14
+}
+skinparam frame {
+  BackgroundColor #E8F4F8
+  BorderColor #2980B9
+  FontSize 14
+}
+skinparam folder {
+  BackgroundColor #FFF9E6
+  BorderColor #F39C12
+  FontSize 14
+}
+skinparam component {
+  BackgroundColor #E8F8F5
+  BorderColor #27AE60
+  FontSize 19
+}
+skinparam interface {
+  BackgroundColor transparent
+  BorderColor transparent
+}
+component "<<AtomicRosNodeClassifier>>\nPerimeterNode" as node {
+  portin "callback_square_perimeter" as s1
+  portin "callback_circle_perimeter" as s2
+  portin "callback_counting_logger" as s3
+}
+frame "s1" as topic_in_square {
+  rectangle "**skeleton::msg::Square**" as t_in_square
+}
+frame "s2" as topic_in_circle {
+  rectangle "**skeleton::msg::Circle**" as t_in_circle
+}
+frame "s3" as topic_in_counting {
+  rectangle "**skeleton::msg::Num**" as t_in_counting
+}
+folder "rs1" as service_two_nums {
+  rectangle "**skeleton::srv::TwoNumbers**" as srv_two_nums
+}
+topic_in_square -[#blue,bold]-> s1
+topic_in_circle -[#blue,bold]-> s2
+topic_in_counting -[#blue,bold]-> s3
+node --( service_two_nums
+@enduml

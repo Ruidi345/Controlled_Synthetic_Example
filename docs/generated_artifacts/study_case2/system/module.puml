@@ -1,0 +1,35 @@
+@startuml
+!theme plain
+left to right direction
+skinparam packageStyle rectangle
+
+component "module" <<ComposedRosNodeClassifier>> {
+
+    portout "p2 / skeleton::msg::Circle" as portoutside1
+    portout "p3 / skeleton::msg::Circle" as portoutside2
+    portout "p1 / skeleton::msg::Age" as portoutside3
+
+    component "to_circle_part" <<RosNodePart>> {
+        portin "s1" as port1
+        portout "p1" as port2
+        portout "p2" as port3
+    }
+    component "square_generator_standalone" <<RosNodePart>> {
+        portout "p1" as port4
+        portout "p2" as port5
+    }
+
+    queue "/square_shape" as square_shape
+
+    ' CONNECTIONS: square_generator_standalone Publishers
+    port4 --[#Green,bold]-> square_shape
+    port5 --[#Green,bold]-> portoutside3
+
+    ' CONNECTIONS: to_circle_part Publishers
+    port2 --[#Green,bold]-> portoutside1
+    port3 --[#Green,bold]-> portoutside2
+
+    ' CONNECTIONS: Pipeline Flow
+    square_shape --[#Blue,bold]-> port1
+}
+@enduml

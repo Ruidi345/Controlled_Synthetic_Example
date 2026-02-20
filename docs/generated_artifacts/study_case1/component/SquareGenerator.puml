@@ -1,0 +1,42 @@
+@startuml
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontSize 14
+}
+skinparam frame {
+  BackgroundColor #E8F4F8
+  BorderColor #2980B9
+  FontSize 14
+}
+skinparam folder {
+  BackgroundColor #FFF9E6
+  BorderColor #F39C12
+  FontSize 14
+}
+skinparam component {
+  BackgroundColor #E8F8F5
+  BorderColor #27AE60
+  FontSize 19
+}
+skinparam interface {
+  BackgroundColor transparent
+  BorderColor transparent
+}
+component "<<AtomicRosNodeClassifier>>\nSquareGenerator" as node {
+  portout " " as p1
+  portout " " as p2
+}
+frame "p1" as topic_out_shape {
+  rectangle "**skeleton::msg::Circle**" as t_out_shape
+}
+frame "p2" as topic_out_age {
+  rectangle "**skeleton::msg::Age**" as t_out_age
+}
+folder "rs1" as service_two_nums {
+  rectangle "**skeleton::srv::TwoNumbers**" as srv_two_nums
+}
+p1 -[#green,bold]-> topic_out_shape
+p2 -[#green,bold]-> topic_out_age
+node --( service_two_nums
+@enduml
