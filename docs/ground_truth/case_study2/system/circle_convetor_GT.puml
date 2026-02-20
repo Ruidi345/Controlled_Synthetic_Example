@@ -1,0 +1,34 @@
+@startuml
+!theme plain
+title System Architecture Toy example
+
+skinparam packageStyle rectangle
+skinparam noteFontSize 8
+skinparam defaultTextAlignment center
+
+left to right direction
+
+component "circle_convertor" as circle_converter <<ComposedRosNodeClassifier>> {
+
+    portin " s1 / skeleton::msg::Circle " as portoutside1
+    portout "p1 / skeleton::msg::Circle" as portoutside3
+
+    component "square_area_node:\nSquareArea" as square_area <<RosNodePart>> {
+        portin "s1" as p1
+        portout "p1" as p2
+    }
+    component "circle_generator_node:\nCircleGenerator" as circle_generator_node <<RosNodePart>>{
+        portin "s1" as p3
+        portout "p1" as p4
+    }
+
+    queue "counting" as counting
+}
+' ====== CONNECTIONS ======
+p2 --[#Green,bold]--> counting
+counting --[#Blue,bold]--> p3
+
+portoutside1 --[#Blue,bold]--> p1
+p4 --[#Green,bold]--> portoutside3
+
+@enduml

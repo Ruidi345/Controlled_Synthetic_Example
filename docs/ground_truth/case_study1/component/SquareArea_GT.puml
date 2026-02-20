@@ -1,0 +1,46 @@
+@startuml
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontSize 14
+}
+
+skinparam frame {
+  BackgroundColor #E8F4F8
+  BorderColor #2980B9
+  FontSize 14
+}
+
+skinparam folder {
+  BackgroundColor #FFF9E6
+  BorderColor #F39C12
+  FontSize 14
+}
+
+skinparam component {
+  BackgroundColor #E8F8F5
+  BorderColor #27AE60
+  FontSize 19
+}
+
+skinparam interface {
+  BackgroundColor transparent
+  BorderColor transparent
+}
+
+component "<<AtomicRosNodeClassifier>>\nSquareArea" as node {
+  portin " " as s1
+  portout " " as p1
+}
+
+frame "s1" as topic_in_shape {
+  rectangle "skeleton::msg::Circle" as t_in_shape
+}
+
+frame "p1" as topic_out_counting {
+  rectangle "skeleton::msg::Num" as t_out_counting
+}
+topic_in_shape ---> s1 : callback_square_area
+topic_out_counting <--- p1
+
+@enduml

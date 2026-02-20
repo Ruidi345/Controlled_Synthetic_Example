@@ -1,0 +1,43 @@
+@startuml
+!theme plain
+title System Architecture Toy example
+
+skinparam packageStyle rectangle
+skinparam noteFontSize 8
+skinparam defaultTextAlignment center
+
+left to right direction
+component "module" as module <<CamposedRosNodeClassifier>>{
+
+    portout "p1 / skeleton::msg::Age " as portoutside2
+    portout "p2 / skeleton::msg::Circle" as portoutside3
+    portout "p3 / skeleton::msg::Circle" as portoutside4
+       
+    component "to_circle_part" as circle_part <<RosNodePart>> {
+        portin "s1" as port1
+        portin "s2" as port2
+        portout "p1" as port3
+        portout "p2" as port4
+}
+
+' ====== GLOBAL NAMESPACE (/) ======
+component "square_generator_standalone:\n SquareGenerator" as square_generating_node <<RosNodePart>>{
+    portout "p1" as port6
+    portout " p2 " as port7
+}
+queue "/square_shape" as square_shape
+
+' ====== GLOBAL CONNECTIONS ======
+port6 --[#Green,bold]--> square_shape
+'s4 --[#Blue,bold]--> port5
+
+square_shape --[#Blue,bold]--> port1 
+square_shape --[#Blue,bold]--> port2 
+
+port7 --[#Green,bold]--> portoutside2
+port3 --[#Green,bold]--> portoutside3
+port4 --[#Green,bold]--> portoutside4
+
+}
+
+@enduml

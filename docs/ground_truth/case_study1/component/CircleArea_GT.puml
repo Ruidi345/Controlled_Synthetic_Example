@@ -1,0 +1,43 @@
+@startuml
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #000000
+  FontSize 14
+}
+skinparam frame {
+  BackgroundColor #E8F4F8
+  BorderColor #2980B9
+  FontSize 14
+}
+skinparam folder {
+  BackgroundColor #FFF9E6
+  BorderColor #F39C12
+  FontSize 14
+}
+skinparam component {
+  BackgroundColor #E8F8F5
+  BorderColor #27AE60
+  FontSize 19
+}
+skinparam interface {
+  BackgroundColor transparent
+  BorderColor transparent
+}
+component "<<AtomicRosNodeClassifier>>\nCircleArea" as node {
+  portin " " as s1
+}
+frame "s1" as topic_in_shape {
+  rectangle "**skeleton::msg::Square**" as t_in_shape
+}
+folder "ps1" as srv_calc_two_nums {
+  rectangle "**skeleton::srv::TwoNumbers**" as srv_calc_two_nums
+  rectangle "service_two_nums(...)"
+}
+folder "ps2" as srv_odd_even {
+  rectangle "**skeleton::srv::OddOrEven**" as srv_odd_even
+  rectangle "service_odd_or_even(...)"
+}
+topic_in_shape ---> s1 : callback_circle_area
+node --0 srv_calc_two_nums
+node --0 srv_odd_even
+@enduml
